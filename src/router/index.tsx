@@ -2,23 +2,22 @@ import { RouteObject, createBrowserRouter } from "react-router-dom";
 import Main from "../pages/Main";
 import PersonalLog from "../pages/PersonalLog";
 import PhotoWall from "../pages/PhotoWall";
-import { uniqueId } from 'lodash'
 
 type RouteItem = RouteObject & {
   id: string
 }
 export const routesList: RouteItem[] = [
   {
-    id: uniqueId('main'),
+    id: 'main',
     path: '/',
     element: <Main />,
   },
   {
-    id: uniqueId('photoWall'),
+    id: 'photoWall',
     path: '/photoWall',
     element: <PhotoWall />,
   }, {
-    id: uniqueId('personalLog'),
+    id: 'personalLog',
     path: '/personalLog',
     element: <PersonalLog />,
   },
