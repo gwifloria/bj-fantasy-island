@@ -1,18 +1,22 @@
-import { routesList } from "@/router"
-import { Menu } from "antd"
-import { uniqueId } from "lodash"
-import { useMemo } from "react"
+import { routesList } from "@/router";
+import { Menu, MenuProps } from "antd";
+import { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const NavigationBar = () => {
+  const navigate = useNavigate();
+
   const navigationItems = useMemo(() => routesList.map((item) => {
     return {
+      ...item,
       label: item.id,
-      key: uniqueId(item.id)
+      key: item.id,
     }
   }), [])
 
-  const handleMenuItemClick = () => {
-    console.log(11)
+  const handleMenuItemClick: MenuProps['onClick'] = (e) => {
+    const { key } = e
+    navigate(`/${key}`)
   }
 
   return (

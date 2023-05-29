@@ -1,15 +1,14 @@
 import { ConfigProvider, Layout } from 'antd';
 import { Content, Footer, Header } from 'antd/es/layout/layout';
-import {
-  RouterProvider
-} from "react-router-dom";
 import './App.css';
 import { NavigationBar } from './components/NavigationBar';
 import { themeConfig } from './constants/theme';
-import { router } from './router';
+import { useRoutes } from 'react-router-dom';
+import { routesList } from './router';
 
 
 function App() {
+  const element = useRoutes(routesList);
 
   return (
     <>
@@ -20,15 +19,11 @@ function App() {
       >
         <Layout className="layout">
           <Header style={{ display: 'flex', alignItems: 'center' }}>
-            <div className="demo-logo" />
             <NavigationBar></NavigationBar>
           </Header>
           <Content style={{ padding: '0 50px' }}>
-            {/* <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>Home</Breadcrumb.Item>
-            </Breadcrumb> */}
             <div className="site-layout-content" >
-              <RouterProvider router={router} />
+              {element}
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>BJ FANTASY ISLAND@2023</Footer>

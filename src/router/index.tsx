@@ -1,4 +1,4 @@
-import { RouteObject, createBrowserRouter } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 import Main from "../pages/Main";
 import PersonalLog from "../pages/PersonalLog";
 import PhotoWall from "../pages/PhotoWall";
@@ -9,7 +9,7 @@ type RouteItem = RouteObject & {
 export const routesList: RouteItem[] = [
   {
     id: 'main',
-    path: '/',
+    path: '/main',
     element: <Main />,
   },
   {
@@ -23,4 +23,3 @@ export const routesList: RouteItem[] = [
   },
 ]
 
-export const router = createBrowserRouter(routesList);
