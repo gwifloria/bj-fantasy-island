@@ -2,6 +2,7 @@ import { RouteObject } from "react-router-dom";
 import Main from "../pages/Main";
 import PersonalLog from "../pages/PersonalLog";
 import PhotoWall from "../pages/PhotoWall";
+import PersonalCenter from "@/pages/PersonalCenter";
 
 type RouteItem = RouteObject & {
   id: string
@@ -20,6 +21,10 @@ export const routesList: RouteItem[] = [
     id: 'personalLog',
     path: '/personalLog',
     element: <PersonalLog />,
+  }, {
+    id: 'personalCenter',
+    path: '/personalCenter',
+    element: <PersonalCenter />,
   },
 ]
 

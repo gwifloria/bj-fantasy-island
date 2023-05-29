@@ -1,6 +1,9 @@
 const Main = ()=>{
   return (
-    <div>Main</div>
+    <div className="main_wrapper">
+      {/* avatar */}
+      
+    </div>
   )
 }
 export default Main
