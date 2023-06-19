@@ -1,0 +1,7 @@
+.my-avatar {
+  &__container {
+    .ant-image-img{
+      border-radius: 50%;
+    }
+  }
+}
