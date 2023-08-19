@@ -1,4 +1,5 @@
 import { Album } from "./Album"
+import { PhotoCarousel } from "../../components/PhotoCarousel"
 import { albumsConfig } from "./config"
 
 const PhotoWall = () => {
@@ -7,7 +8,7 @@ const PhotoWall = () => {
       {
         albumsConfig?.map((album) => <Album key={album.key} items={album.items}></Album>)
       }
-
+      <PhotoCarousel></PhotoCarousel>
     </div>
   )
 }

@@ -2,10 +2,10 @@ import { routesList } from "@/router";
 import { Menu, MenuProps } from "antd";
 import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import './index.scss';
 
 export const NavigationBar = () => {
   const navigate = useNavigate();
-
   const navigationItems = useMemo(() => routesList.map((item) => {
     return {
       ...item,
@@ -21,8 +21,8 @@ export const NavigationBar = () => {
 
   return (
     <Menu
+      className="navigation-bar__container"
       onClick={handleMenuItemClick}
-      theme="dark"
       mode="horizontal"
       defaultSelectedKeys={['1']}
       items={navigationItems}
