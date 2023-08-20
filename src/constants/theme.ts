@@ -1,10 +1,8 @@
 import { ThemeConfig } from "antd";
 
 export const themeConfig:ThemeConfig["token"] = {
-  colorPrimary:'#9cada1',
-  colorSuccess:'#b1c0bf',
-  colorError:'#90655a',
-  colorWarning:'#c9957a',
-  colorInfo:'#cdd8cc',
-  colorFillAlter:'#cdd8cc66'
-}
+  "colorPrimary": "#9cada1",
+    "colorInfo": "#9cada1",
+    "colorSuccess": "#a0cca0",
+    "colorWarning": "#c9957a",
+    "colorError": "#da7775"}
