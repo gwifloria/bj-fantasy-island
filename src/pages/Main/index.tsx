@@ -1,8 +1,10 @@
-const Main = ()=>{
+import { PhotoCarousel } from "@/components/PhotoCarousel"
+
+const Main = () => {
   return (
     <div className="main_wrapper">
       {/* avatar */}
-      
+      <PhotoCarousel />
     </div>
   )
 }

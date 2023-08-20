@@ -1,16 +1,14 @@
 import { ConfigProvider, Layout } from 'antd';
 import { Content, Footer, Header } from 'antd/es/layout/layout';
-import { useNavigate, useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import './App.scss';
 import { NavigationBar } from './components/NavigationBar';
 import { themeConfig } from './constants/theme';
 import { routesList } from './router';
 
-import { UserOutlined } from '@ant-design/icons';
 
 function App() {
   const element = useRoutes(routesList);
-  const navigate = useNavigate()
 
   return (
     <>
@@ -20,11 +18,10 @@ function App() {
         }}
       >
         <Layout className="layout">
-          <Header style={{ display: 'flex', alignItems: 'center',justifyContent:'space-between' }}>
+          <Header style={{ display: 'flex', background: 'none', alignItems: 'center', justifyContent: 'flex-end' }}>
             <NavigationBar></NavigationBar>
-            <UserOutlined onClick={()=>navigate('/personalCenter')}  style={{fontSize:'20px',color:'#fff',cursor:'pointer'}}/>
           </Header>
-          <Content style={{ padding: '0 50px' }}>
+          <Content style={{ padding: '32px 48px' }}>
             <div className="site-layout-content" >
               {element}
             </div>
