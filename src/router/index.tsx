@@ -10,6 +10,12 @@ type RouteItem = RouteObject & {
 }
 export const routesList: RouteItem[] = [
   {
+    id: '',
+    path: '/',
+    index: true,
+    element: <Main />,
+  },
+  {
     id: 'main',
     path: '/main',
     element: <Main />,
