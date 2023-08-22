@@ -1,15 +1,28 @@
-import { ConfigProvider, Layout } from 'antd';
+import { ConfigProvider, Layout, theme } from 'antd';
 import { Content, Footer, Header } from 'antd/es/layout/layout';
 import { useRoutes } from 'react-router-dom';
 import './App.scss';
 import { NavigationBar } from './components/NavigationBar';
 import { themeConfig } from './constants/theme';
 import { routesList } from './router';
+const { useToken } = theme;
+
+const MainLayout = () => {
+  const element = useRoutes(routesList);
+  const { token: customTheme } = useToken();
+
+  return <Layout className="layout">
+    <Header style={{ backgroundColor: customTheme.colorPrimary, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+      <NavigationBar></NavigationBar>
+    </Header>
+    <Content>
+      {element}
+    </Content>
+  </Layout>
+}
 
 
 function App() {
-  const element = useRoutes(routesList);
-
   return (
     <>
       <ConfigProvider
@@ -17,17 +30,7 @@ function App() {
           token: { ...themeConfig },
         }}
       >
-        <Layout className="layout">
-          <Header style={{ display: 'flex', background: 'none', alignItems: 'center', justifyContent: 'flex-end' }}>
-            <NavigationBar></NavigationBar>
-          </Header>
-          <Content style={{ padding: '32px 48px' }}>
-            <div className="site-layout-content" >
-              {element}
-            </div>
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>BJ FANTASY ISLAND@2023</Footer>
-        </Layout>
+        <MainLayout />
       </ConfigProvider>
     </>
   )
