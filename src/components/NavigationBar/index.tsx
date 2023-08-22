@@ -19,6 +19,8 @@ export const NavigationBar = () => {
     navigate(`/${key}`)
   }
 
+  
+
   return (
     <Menu
       className="navigation-bar__container"

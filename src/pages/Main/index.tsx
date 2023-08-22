@@ -1,10 +1,17 @@
+import { PersonalIntroduction } from "@/components/PersonalIntroduction"
 import { PhotoCarousel } from "@/components/PhotoCarousel"
-
+import './index.scss'
+import { useThemeToken } from "@/hooks/useThemeToken"
 const Main = () => {
+  const { token } = useThemeToken()
   return (
-    <div className="main_wrapper">
+    <div style={{background:token.colorPrimary}} className="main-page--container">
       {/* avatar */}
+      <PersonalIntroduction></PersonalIntroduction>
+      <div className="carousel">
       <PhotoCarousel />
+      </div>
+     
     </div>
   )
 }
