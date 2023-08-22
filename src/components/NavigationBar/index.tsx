@@ -1,4 +1,3 @@
-import { useThemeToken } from "@/hooks/useThemeToken";
 import { routesList } from "@/router";
 import { Menu, MenuProps } from "antd";
 import { useMemo } from "react";

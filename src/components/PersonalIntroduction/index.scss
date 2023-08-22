@@ -1,24 +1,34 @@
 
-  .text {padding:40px 0;text-align:center;}
-  .container {
-     text-align:center;
-     font-size:48px;
-     position: relative;
-     .confetti {
-        >.particle {
-           opacity:0;
-           position: absolute;
-           animation: confetti 3s ease-in infinite;
-           &.c1 {
-              background-color:rgba(76,175,80,0.5);
-           }
-           &.c2 {
-              background-color:rgba(156,39,176,0.5);
-           }
-        }
-     }
+  .personal-introduction__wrapper{
+   padding-top:108px;
+   text-align: left;
+   font-size:48px;
+   padding-left:64px;
+   .text {padding:40px 0}
+   .container {
+      position: relative;
+      .confetti {
+         >.particle {
+            opacity:0;
+            position: absolute;
+            animation: confetti 3s ease-in infinite;
+            &.c1 {
+               background-color:rgba(216, 213, 109, 0.5);
+            }
+            &.c2 {
+               background-color:rgba(156,39,176,0.5);
+            }
+         }
+      }
+   }
+   .brief-intro{
+      font-size: 36px;
+      >span{
+         display: block;
+      }
+   }
+ 
   }
-
 @keyframes confetti {
   0% {
      opacity:0;

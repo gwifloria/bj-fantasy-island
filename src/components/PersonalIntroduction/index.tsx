@@ -1,6 +1,6 @@
+import { isNumber } from 'lodash'
 import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import './index.scss'
-import { isNumber } from 'lodash'
 
 export const PersonalIntroduction = () => {
   const domRef = useRef<HTMLDivElement>(null)
@@ -31,6 +31,11 @@ export const PersonalIntroduction = () => {
       <span ref={domRef} className="text confetti">WELCOME
         {renderChildren}
       </span>
+    </div>
+    <div className='brief-intro'>
+      <span>Hi, I&lsquo;m HUIJUE GONG</span>
+      <span>I am a Front End Developer</span>
+      <span>This is my personal website</span>
     </div>
   </div>)
 }

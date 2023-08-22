@@ -8,7 +8,10 @@ const Main = () => {
     <div style={{background:token.colorPrimary}} className="main-page--container">
       {/* avatar */}
       <PersonalIntroduction></PersonalIntroduction>
+      <div className="carousel">
       <PhotoCarousel />
+      </div>
+     
     </div>
   )
 }

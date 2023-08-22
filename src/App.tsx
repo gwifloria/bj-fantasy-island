@@ -1,5 +1,5 @@
 import { ConfigProvider, Layout, theme } from 'antd';
-import { Content, Footer, Header } from 'antd/es/layout/layout';
+import { Content, Header } from 'antd/es/layout/layout';
 import { useRoutes } from 'react-router-dom';
 import './App.scss';
 import { NavigationBar } from './components/NavigationBar';
@@ -12,15 +12,14 @@ const MainLayout = () => {
   const { token: customTheme } = useToken();
 
   return <Layout className="layout">
-    <Header style={{ backgroundColor: customTheme.colorPrimary, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+    <Header className='header' style={{ backgroundColor: customTheme.colorPrimary, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
       <NavigationBar></NavigationBar>
     </Header>
-    <Content>
+    <Content className='content'>
       {element}
     </Content>
   </Layout>
 }
-
 
 function App() {
   return (
