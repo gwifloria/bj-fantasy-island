@@ -12,7 +12,7 @@ const MainLayout = () => {
   const { token: customTheme } = useToken();
 
   return <Layout className="layout">
-    <Header className='header' style={{ backgroundColor: customTheme.colorPrimary, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+    <Header className='header' style={{ backgroundColor: customTheme.colorBgLayout, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
       <NavigationBar></NavigationBar>
     </Header>
     <Content className='content'>
