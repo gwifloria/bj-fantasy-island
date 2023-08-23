@@ -1,13 +1,14 @@
 
-  .personal-introduction__wrapper{
-   padding-top:108px;
+  .personal-introduction__container{
    text-align: left;
    font-size:48px;
-   padding-left:64px;
+   padding:108px;
+   padding-bottom: 0;
    .text {padding:40px 0}
    .container {
       position: relative;
       .confetti {
+         font-size: 64px;
          >.particle {
             opacity:0;
             position: absolute;

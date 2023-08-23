@@ -20,22 +20,21 @@ export const PersonalIntroduction = () => {
 
   const renderChildren = useMemo(() => {
     if (!width) { return <></> }
-    const count = Math.floor(width / 50 * 10)
+    const count = Math.floor(width / 50 * 8)
     const numArray = new Array(count).fill(0)
-    return numArray.map((_i, index) => <span key={index} className={`particle c${rnd(1, 2)}`} style={{ top: `${rnd(10, 50)} %`, left: `${rnd(0, 100)}%`, width: `${rnd(6, 8)}px`, height: `${rnd(3, 4)}px`, animationDelay: `${(rnd(0, 30) / 10)}s` }}  ></span>)
+    return numArray.map((_i, index) => <span key={index} className={`particle c${rnd(1, 2)}`} style={{ top: `${rnd(10, 50)} %`, left: `${rnd(0, 100)}%`, width: `${rnd(7, 9)}px`, height: `${rnd(3, 4)}px`, animationDelay: `${(rnd(0, 30) / 10)}s` }}  ></span>)
   }, [width])
 
 
-  return (<div className="personal-introduction__wrapper">
+  return (<div className="personal-introduction__container">
     <div className="container">
-      <span ref={domRef} className="text confetti">WELCOME
+      <span ref={domRef} className="text confetti">WELCOME TO BJ&lsquo;FANTASY ISLAND
         {renderChildren}
       </span>
     </div>
     <div className='brief-intro'>
       <span>Hi, I&lsquo;m HUIJUE GONG</span>
       <span>I am a Front End Developer</span>
-      <span>This is my personal website</span>
     </div>
   </div>)
 }
