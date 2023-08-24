@@ -12,7 +12,6 @@ export const routesList: RouteItem[] = [
   {
     id: '',
     path: '/',
-    index: true,
     element: <Main />,
   },
   {

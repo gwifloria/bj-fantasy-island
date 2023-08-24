@@ -1,5 +1,6 @@
 import { ConfigProvider, Layout, theme } from 'antd';
 import { Content, Header } from 'antd/es/layout/layout';
+import { memo, useMemo } from 'react';
 import { useRoutes } from 'react-router-dom';
 import './App.scss';
 import { NavigationBar } from './components/NavigationBar';
@@ -10,15 +11,17 @@ const { useToken } = theme;
 const MainLayout = () => {
   const element = useRoutes(routesList);
   const { token: customTheme } = useToken();
-
-  return <Layout className="layout">
-    <Header className='header' style={{ backgroundColor: customTheme.colorBgLayout, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-      <NavigationBar></NavigationBar>
-    </Header>
-    <Content className='content'>
-      {element}
-    </Content>
-  </Layout>
+  const ele = useMemo(() => {
+    return <Layout className="layout">
+      <Header className='header' style={{ backgroundColor: customTheme.colorBgLayout, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+        <NavigationBar></NavigationBar>
+      </Header>
+      <Content className='content'>
+        {element}
+      </Content>
+    </Layout>
+  }, [])
+  return ele
 }
 
 function App() {
@@ -35,4 +38,4 @@ function App() {
   )
 }
 
-export default App
+export default memo(App)
