@@ -1,4 +1,4 @@
-export const skills = ['react','typescript','vue']
+export const skills = ['REACT','TYPESCRIPT','VUE']
 // const frameworkSkills = ['next.js','Taro']
 // const cssSkills = ['tailWind',]
 

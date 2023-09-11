@@ -7,6 +7,7 @@
    .text {padding:40px 0}
    .container {
       position: relative;
+      margin-bottom:48px;
       .confetti {
          font-size: 64px;
          >.particle {
@@ -30,6 +31,9 @@
    }
    .detail-info{
       font-size: 24px;
+      >div{
+         margin:16px 0 ;
+      }
    }
    .intro-footer{
       font-size: 16px;
@@ -38,6 +42,13 @@
       margin: 48px 0;
       display: flex;
       font-size: 48px;
+   }
+   .skill-card{
+      background: #638772;
+      color: #dfe8e3;
+      font-size: 32px;
+      text-align: center;
+      font-family: monospace;
    }
  
   }
@@ -59,3 +70,13 @@
      opacity:0;
      transform:translateY(2000%) rotate(1440deg);
   }}
+
+@keyframes bounce {
+   0%{
+      transform:translateY(30px);
+   }
+   100%{
+      transform:translateY(0px);
+
+   }
+}

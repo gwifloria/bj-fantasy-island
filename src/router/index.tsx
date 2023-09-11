@@ -15,8 +15,8 @@ export const routesList: RouteItem[] = [
     element: <Main />,
   },
   {
-    id: 'main',
-    path: '/main',
+    id: 'about',
+    path: '/about',
     element: <Main />,
   },
   {

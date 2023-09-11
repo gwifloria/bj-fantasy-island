@@ -1,13 +1,11 @@
-import { Album } from "./Album"
 import { PhotoCarousel } from "../../components/PhotoCarousel"
-import { albumsConfig } from "./config"
-
+import './index.scss'
 const PhotoWall = () => {
   return (
     <div className="photo-wall__container">
-      {
-        albumsConfig?.map((album) => <Album key={album.key} items={album.items}></Album>)
-      }
+      <div className="introduction">
+        Photography Portfolio
+      </div>
       <PhotoCarousel></PhotoCarousel>
     </div>
   )

@@ -50,11 +50,10 @@ export const PersonalIntroduction = () => {
       </Col>
     </Row>
 
-
     <Row className='skills' gutter={16}>
       {skills.map((skill, index) =>
         <Col key={index} span={8}>
-          <Card>{skill}</Card>
+          <Card className="skill-card">{skill}</Card>
         </Col>
       )}
     </Row>
