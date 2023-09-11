@@ -1,6 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import Main from "../pages/Main";
 import PersonalLog from "../pages/PersonalLog";
+import Resume from "@/pages/Resume"
 import PhotoWall from "../pages/PhotoWall";
 import { Todos } from "@/pages/Todos";
 
@@ -18,6 +19,11 @@ export const routesList: RouteItem[] = [
     id: 'about',
     path: '/about',
     element: <Main />,
+  },
+  {
+    id: 'resume',
+    path: '/resume',
+    element: <Resume />,
   },
   {
     id: 'photoWall',
