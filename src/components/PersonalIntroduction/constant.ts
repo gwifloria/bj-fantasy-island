@@ -1,5 +1,6 @@
-export const skills = ['react','typescript','vue','jQuery','javascript','Taro','css'
-]
+export const skills = ['react','typescript','vue']
+// const frameworkSkills = ['next.js','Taro']
+// const cssSkills = ['tailWind',]
 
 export const personalDescriptions=[
   'I’m a developer experienced in building websites for small and medium-sized businesses like backend management systems as well as developing map-related display projects.',
