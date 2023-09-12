@@ -6,6 +6,7 @@ import './App.scss';
 import { NavigationBar } from './components/NavigationBar';
 import { themeConfig } from './constants/theme';
 import { routesList } from './router';
+import { ContactMe } from './components/ContactMe';
 const { useToken } = theme;
 
 const MainLayout = () => {
@@ -13,8 +14,9 @@ const MainLayout = () => {
   const { token: customTheme } = useToken();
 
   return <Layout className="layout">
-  <Header className='header' style={{ backgroundColor: customTheme.colorBgLayout, display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+  <Header className='header' style={{ backgroundColor: customTheme.colorBgLayout, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
     <NavigationBar></NavigationBar>
+    <ContactMe></ContactMe>
   </Header>
   <Content className='content'>
     {element}

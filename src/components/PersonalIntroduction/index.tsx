@@ -59,7 +59,7 @@ export const PersonalIntroduction = () => {
     </Row>
 
     <div className='intro-footer'>
-      Regular communication is important to me, so let’s keep in touch.
+      Let’s keep in touch.🐶
     </div>
 
   </div>)

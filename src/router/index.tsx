@@ -1,9 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import Main from "../pages/Main";
-import PersonalLog from "../pages/PersonalLog";
 import Resume from "@/pages/Resume"
 import PhotoWall from "../pages/PhotoWall";
-import { Todos } from "@/pages/Todos";
 
 type RouteItem = RouteObject & {
   id: string
@@ -16,27 +14,28 @@ export const routesList: RouteItem[] = [
     element: <Main />,
   },
   {
-    id: 'about',
+    id: 'ABOUT',
     path: '/about',
     element: <Main />,
   },
   {
-    id: 'resume',
+    id: 'RESUME',
     path: '/resume',
     element: <Resume />,
   },
   {
-    id: 'photoWall',
+    id: 'PHOTOWALL',
     path: '/photoWall',
     element: <PhotoWall />,
-  }, {
-    id: 'personalLog',
-    path: '/personalLog',
-    element: <PersonalLog />,
-  }, {
-    id: 'todo',
-    path: '/todo',
-    element: <Todos />,
-  },
+  }, 
+  // {
+  //   id: 'personalLog',
+  //   path: '/personalLog',
+  //   element: <PersonalLog />,
+  // }, {
+  //   id: 'todo',
+  //   path: '/todo',
+  //   element: <Todos />,
+  // },
 ]
 

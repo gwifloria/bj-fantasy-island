@@ -14,5 +14,11 @@ export const todoItems:{title:string,content:string}[] = [
   {
     title:'express+mongodb',
     content:'做一个大文件上传的功能'
+  },{
+    title:'npm cli',
+    content:'做一个自己的脚手架'
+  },{
+    title:'国际化',
+    content:'支持中英文'
   },
 ]

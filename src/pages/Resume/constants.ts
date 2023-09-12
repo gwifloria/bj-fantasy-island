@@ -39,7 +39,7 @@ export const projectExperienceList:ProjectExperienceProps[] =[
       '- Operation and Maintenance Management Subsystem (vue): Collaborate to complete the Node.js large file slicing upload function (responsible for the non-Node.js part)'
     ]
   },
-  {projectName:'Passenger side h5 project and Mini Program',
+  {projectName:'Uber-like h5 project and Wechat Mini Program',
   projectBackground:'The passenger side h5 project is a taxi platform, which meets the usage scenarios where users can use the software to take a taxi and scan the code to take an unmanned minibus; the sweeper mobile end supports users to perform vehicle remote control operation at the h5 end and control the forward direction of the sweeper vehicle.',
   details:[
     '- Use submodule to solve the problem of different repository code to reuse, and then use turborepo to solve the problem of multi-person parallel development',
