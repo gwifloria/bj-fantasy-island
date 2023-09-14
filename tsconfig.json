@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     },
     },
-  "include": ["src"],
+  "include": ["src", "useReactFetch/index.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

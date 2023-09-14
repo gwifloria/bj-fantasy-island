@@ -1,5 +1,8 @@
+import mePng from "@/assets/me.png"
+import { Card, Col, Image, Row } from 'antd'
 import { isNumber } from 'lodash'
 import { useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { personalDescriptions, skills } from './constant'
 import './index.scss'
 
 export const PersonalIntroduction = () => {
@@ -32,9 +35,32 @@ export const PersonalIntroduction = () => {
         {renderChildren}
       </span>
     </div>
-    <div className='brief-intro'>
-      <span>Hi, I&lsquo;m HUIJUE GONG</span>
-      <span>I am a Front End Developer</span>
+    <Row gutter={24}>
+      <Col span={16}>
+        <div className='brief-intro'>
+          <span>Hi, I&lsquo;m HUIJUE GONG</span>
+          <span>I am a Front End Developer</span>
+        </div>
+        <div className='detail-info'>
+          {personalDescriptions?.map((content, i) => <div key={i}>{content}</div>)}
+        </div>
+      </Col>
+      <Col span={8}>
+        <Image src={mePng}></Image>
+      </Col>
+    </Row>
+
+    <Row className='skills' gutter={16}>
+      {skills.map((skill, index) =>
+        <Col key={index} span={8}>
+          <Card className="skill-card">{skill}</Card>
+        </Col>
+      )}
+    </Row>
+
+    <div className='intro-footer'>
+      Let’s keep in touch.🐶
     </div>
+
   </div>)
 }
