@@ -1,3 +1,4 @@
+import SplittingTitle from "@/components/SplittingTitle"
 import { ProjectExperience } from "./ProjectExperience"
 import { WorkHistory } from "./WorkHistory"
 import { projectExperienceList, workHistoryList } from "./constants"
@@ -8,13 +9,18 @@ const Resume = () => {
     <div className="resume">
       {/* work history */}
       <div className="work-history--container">
-        <h1>Work History</h1>
+        <SplittingTitle>
+          <h1>Work History
+          </h1>
+        </SplittingTitle>
         {workHistoryList?.map((item, index) => <WorkHistory key={index} {...item}></WorkHistory>)}
       </div>
 
       {/* project experience */}
       <div className="project-experience--container">
-        <h1>Project Experience</h1>
+        <SplittingTitle>
+          <h1>Project Experience</h1>
+        </SplittingTitle>
         {projectExperienceList?.map((item, index) => <ProjectExperience key={index} {...item}></ProjectExperience>)}
       </div>
 
