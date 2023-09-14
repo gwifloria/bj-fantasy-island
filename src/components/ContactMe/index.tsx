@@ -1,5 +1,6 @@
 import { MailOutlined } from "@ant-design/icons";
 import { Popover, message } from "antd";
+import { useCopyToClipboard } from "react-use";
 import './index.scss';
 
 const email = 'ghuijue@gmail.com'
@@ -10,11 +11,12 @@ const ShakeSquare = () => {
 }
 const Content = () => {
   const [messageApi, contextHolder] = message.useMessage();
+  const [, copyToClipboard] = useCopyToClipboard();
 
   const handleClick = async () => {
     try {
-      await navigator.clipboard.writeText(email);
-      messageApi.success('copied!')
+      copyToClipboard(email);
+      messageApi.success(`copied!`)
     } catch {
       console.log('oops');
     }
@@ -25,7 +27,7 @@ const Content = () => {
       {contextHolder}
       <MailOutlined />
       &nbsp;
-      <span onClick={handleClick} className="mail">{email}</span>
+      <span style={{ cursor: 'pointer' }} onClick={handleClick} className="mail">{email}</span>
     </p>
   );
 

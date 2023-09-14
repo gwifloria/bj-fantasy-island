@@ -18,7 +18,7 @@ const MainLayout = () => {
     <NavigationBar></NavigationBar>
     <ContactMe></ContactMe>
   </Header>
-  <Content className='content'>
+  <Content id="content-container" className='content'>
     {element}
   </Content>
 </Layout>

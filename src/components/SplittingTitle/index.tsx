@@ -1,14 +1,27 @@
 import { ReactNode, useEffect, useRef } from "react";
+import { useIntersection } from "react-use";
 import Splitting from "splitting";
 import "splitting/dist/splitting.css";
-import './index.scss'
+import './index.scss';
+import classNames from "classnames";
 
 interface SplittingProps {
-  children: string| ReactNode
+  children: string | ReactNode
 }
 const SplittingTitle = (props: SplittingProps) => {
   const { children } = props
   const ref = useRef<HTMLDivElement>(null)
+
+  const root = document.getElementById("content-container")
+
+  const intersection = useIntersection(ref, {
+    root: root,
+    rootMargin: '20px',
+    threshold: 1
+  });
+
+  console.log(intersection?.isIntersecting, ref.current)
+  const claZZ = classNames('splitting-title', intersection?.isIntersecting ? 'in' : 'out')
 
   useEffect(() => {
     Splitting({
@@ -24,7 +37,7 @@ const SplittingTitle = (props: SplittingProps) => {
   }, [])
 
   return (
-    <div className="splitting-title" ref={ref} data-splitting>{children}</div>
+    <div className={claZZ} ref={ref} data-splitting>{children}</div>
   )
 }
 export default SplittingTitle
