@@ -1,9 +1,10 @@
 import mePng from "@/assets/me.png"
-import { Card, Col, Image, Row } from 'antd'
+import { Card, Col, Divider, Image, Row } from 'antd'
 import { isNumber } from 'lodash'
 import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { personalDescriptions, skills } from './constant'
 import './index.scss'
+import { PersonalOKR } from "../PersonalOKR"
 
 export const PersonalIntroduction = () => {
   const domRef = useRef<HTMLDivElement>(null)
@@ -62,5 +63,8 @@ export const PersonalIntroduction = () => {
       Let’s keep in touch.🐶
     </div>
 
+    <Divider orientation="left">personal OKR</Divider>
+
+    <PersonalOKR></PersonalOKR>
   </div>)
 }
