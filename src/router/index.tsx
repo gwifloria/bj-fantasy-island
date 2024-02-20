@@ -1,11 +1,10 @@
-import { RouteObject } from "react-router-dom";
-import Main from "../pages/Main";
-import Resume from "@/pages/Resume"
-import PhotoWall from "../pages/PhotoWall";
+import Resume from '@/pages/Resume';
+import { RouteObject } from 'react-router-dom';
+import Main from '../pages/Main';
 
 type RouteItem = RouteObject & {
-  id: string
-}
+  id: string;
+};
 
 export const routesList: RouteItem[] = [
   {
@@ -23,11 +22,11 @@ export const routesList: RouteItem[] = [
     path: '/resume',
     element: <Resume />,
   },
-  {
-    id: 'PHOTOWALL',
-    path: '/photoWall',
-    element: <PhotoWall />,
-  }, 
+  // {
+  //   id: 'PHOTOWALL',
+  //   path: '/photoWall',
+  //   element: <PhotoWall />,
+  // },
   // {
   //   id: 'personalLog',
   //   path: '/personalLog',
@@ -37,5 +36,4 @@ export const routesList: RouteItem[] = [
   //   path: '/todo',
   //   element: <Todos />,
   // },
-]
-
+];
