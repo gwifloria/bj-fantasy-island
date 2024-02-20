@@ -1,4 +1,11 @@
 import { ProjectExperienceProps, WorkHistoryProps } from './type';
+import auto1 from '@/assets/auto1.png';
+import auto2 from '@/assets/auto2.png';
+import auto3 from '@/assets/auto3.png';
+
+import cloud1 from '@/assets/cloud1.png';
+import cloud2 from '@/assets/cloud2.png';
+import cloud3 from '@/assets/cloud3.png';
 
 export const workHistoryList: WorkHistoryProps[] = [
   {
@@ -32,9 +39,10 @@ export const projectExperienceList: ProjectExperienceProps[] = [
       '- Complete (Vue+Typescript+Pinia+Element Plus) project construction',
       '- Based on Baidu Maps (bmapgl), complete the map page function development and module animation:',
     ],
+    pictures: [auto1, auto2, auto3],
   },
   {
-    projectName: ' Cloud Control Platform System Project',
+    projectName: 'Cloud Control Platform System Project',
     projectBackground:
       'The cloud control platform is a "vehicle-road cloud integration" platform for collaborative supervision, analysis and decision-making to meet the needs of intelligent driving vehicle supervision and scheduling, smart travel, etc. It supports the monitoring and management of vehicles and roadside equipment',
     details: [
@@ -43,14 +51,6 @@ export const projectExperienceList: ProjectExperienceProps[] = [
       '- Use Frabric.js to realize canvas to draw the sweeper track line on the picture, and complete the upload and echo functions',
       '- Operation and Maintenance Management Subsystem (vue): Collaborate to complete the Node.js large file slicing upload function (responsible for the non-Node.js part)',
     ],
-  },
-  {
-    projectName: 'Uber-like h5 project and Wechat Mini Program',
-    projectBackground:
-      'The passenger side h5 project is a taxi platform, which meets the usage scenarios where users can use the software to take a taxi and scan the code to take an unmanned minibus; the sweeper mobile end supports users to perform vehicle remote control operation at the h5 end and control the forward direction of the sweeper vehicle.',
-    details: [
-      '- Use submodule to solve the problem of different repository code to reuse, and then use turborepo to solve the problem of multi-person parallel development',
-      '- Develop login, list, personal center business display and mobile end map display: vehicle location, site tags, vehicle trajectory lines, etc.',
-    ],
+    pictures: [cloud1, cloud2, cloud3],
   },
 ];

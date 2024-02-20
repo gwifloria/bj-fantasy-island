@@ -1,9 +1,10 @@
 import { projectExperienceList } from '@/pages/Resume/constants';
-import { List } from 'antd';
+import { Carousel, List } from 'antd';
 import React from 'react';
 import './index.scss';
 
 const data = projectExperienceList.map((project) => ({
+  ...project,
   title: `${project.projectName}`,
   description: project.projectBackground,
   content: project.details,
@@ -24,7 +25,11 @@ export const WorkExperience: React.FC = () => (
         <List.Item
           key={item.title}
           extra={
-            <img width={272} alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png" />
+            <Carousel autoplay>
+              {item.pictures.map((i) => {
+                return <img src={i} key={i}></img>;
+              })}
+            </Carousel>
           }
         >
           <List.Item.Meta title={item.title} description={item.description} />
