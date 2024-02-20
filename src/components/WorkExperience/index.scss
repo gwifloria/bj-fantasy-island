@@ -1,0 +1,10 @@
+.work-experience--container {
+  text-align: left;
+  padding: 84px;
+  .ant-list-vertical .ant-list-item .ant-list-item-meta .ant-list-item-meta-title {
+    font-size: 36px;
+  }
+  .ant-list .ant-list-item .ant-list-item-meta .ant-list-item-meta-description {
+    font-size: 24px;
+  }
+}

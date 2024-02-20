@@ -1,35 +1,44 @@
 import { ConfigProvider, Layout, theme } from 'antd';
-import { Content, Header } from 'antd/es/layout/layout';
+import { Content, Footer, Header } from 'antd/es/layout/layout';
 import { memo, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import './App.scss';
+import { ContactMe } from './components/ContactMe';
 import { NavigationBar } from './components/NavigationBar';
 import { themeConfig } from './constants/theme';
 import { routesList } from './router';
-import { ContactMe } from './components/ContactMe';
-import { TimeClock } from './components/TimeClock';
 const { useToken } = theme;
 
 const MainLayout = () => {
   const element = useRoutes(routesList);
   const { token: customTheme } = useToken();
 
-  return <Layout className="layout">
-  <Header className='header' style={{ backgroundColor: customTheme.colorBgLayout, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-    <NavigationBar></NavigationBar>
-    <TimeClock></TimeClock>
-    <ContactMe></ContactMe>
-  </Header>
-  <Content id="content-container" className='content'>
-    {element}
-  </Content>
-</Layout>
-}
+  return (
+    <Layout className="layout">
+      <Header
+        className="header"
+        style={{
+          backgroundColor: customTheme.colorFillSecondary,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
+        <NavigationBar></NavigationBar>
+        <ContactMe></ContactMe>
+      </Header>
+      <Content id="content-container" className="content">
+        {element}
+      </Content>
+      <Footer></Footer>
+    </Layout>
+  );
+};
 
 function App() {
-  useEffect(()=>{
+  useEffect(() => {
     console.log(222);
-  },[])
+  }, []);
   return (
     <>
       <ConfigProvider
@@ -40,7 +49,7 @@ function App() {
         <MainLayout />
       </ConfigProvider>
     </>
-  )
+  );
 }
 
-export default memo(App)
+export default memo(App);
